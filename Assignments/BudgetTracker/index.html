@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="budgettrackerlogo.png">
+</head>
+<body>
+
+<div class="container">
+    <h1>Personal Budget Tracker</h1>
+
+    <!-- Updated links with proper IDs for scrolling -->
+    <a href="#transaction-section">Add Income/Expense</a> |
+    <a href="#summary">View Budget Summary</a>
+
+    <h2>Welcome to the Personal Budget Tracker</h2>
+    <p>This tracker helps you manage your monthly income and expenses. You can add new entries and view a detailed summary of your budget.</p>
+
+    <!-- Add Income/Expense Section -->
+    <h2 id="transaction-section">Add New Income or Expense</h2>
+    <form id="transactionForm">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" required>
+        <br>
+
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Salary">Salary</option>
+            <option value="Savings">Savings</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Housing">Housing</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" required>
+        <br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <br>
+
+        <label>Type:</label>
+        <input type="radio" name="type" value="income" checked> Income
+        <input type="radio" name="type" value="expense"> Expense
+        <br>
+
+        <button type="submit">Add Entry</button>
+    </form>
+
+    <!-- Budget Summary Section -->
+    <h2 id="summary">Budget Summary</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="transactionList"></tbody>
+    </table>
+
+    <footer>
+        <p>Personal Budget Tracker - Version 1.0</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

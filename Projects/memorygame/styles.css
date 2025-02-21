@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #1e1e2e;
+    padding: 20px;
+}
+
+/* Title styling */
+h2 {
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Layout container */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #2e2e4e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Sidebar for buttons + Reset */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+}
+
+/* Style for category buttons */
+.sidebar button {
+    padding: 15px;
+    font-size: 1.2em;
+    color: white;
+    background: #3a3af0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebar button:hover {
+    background: #5757f5;
+}
+
+/* Reset button styling (Moved to left side under buttons) */
+.reset {
+    background: #ff3b3b;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.reset:hover {
+    background: #ff6464;
+}
+
+/* Game board */
+.game-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game {
+    width: 440px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4, 1fr);  /* 4 rows */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: #44446a;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Card tiles */
+.item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.item.boxMatch {
+    background: #00c853;
+    color: white;
+}
